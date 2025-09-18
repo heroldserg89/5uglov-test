@@ -57,5 +57,8 @@
   },
   "overrides": {
     "es5-ext": "0.10.53"
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.1"
   }
 }

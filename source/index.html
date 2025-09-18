@@ -1,17 +1,450 @@
 <!DOCTYPE html>
-<html class="page" lang="ru">
-  <head>
-    <meta charset="UTF-8">
-    <title>Название проекта</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="preload" href="#" type="font/woff2" as="font">
-    <link rel="stylesheet" href="styles/styles.css">
-    <script src="scripts/index.js" defer></script>
-  </head>
-  <body class="page__body">
-    <header class="header">Шапка</header>
-    <main>
-      <h1>Страница для старта</h1>
-    </main>
-  </body>
+<html
+  class="page"
+  lang="ru"
+>
+<head>
+  <meta charset="UTF-8">
+  <title>Название проекта</title>
+  <meta
+    name="viewport"
+    content="width=device-width,initial-scale=1"
+  >
+  <link
+    rel="preload"
+    href="#"
+    type="font/woff2"
+    as="font"
+  >
+  <link
+    rel="stylesheet"
+    href="styles/styles.css"
+  >
+  <script
+    src="scripts/index.js"
+    defer
+  ></script>
+</head>
+<body class="page__body">
+<header class="header">
+  <div class="header__wrapper container">
+    <nav class="header__nav">
+      <ul class="header__menu">
+        <li class="header__menu-item">
+          <a
+            class="header__menu-link"
+            href="#"
+          >
+            Каталог
+          </a>
+        </li>
+        <li class="header__menu-item">
+          <a
+            class="header__menu-link"
+            href="#"
+          >
+            О компании
+          </a>
+        </li>
+        <li class="header__menu-item">
+          <a
+            class="header__menu-link"
+            href="#"
+          >
+            Магазины
+          </a>
+        </li>
+      </ul>
+      <a
+        class="header__logo logo"
+        href="/"
+        aria-current="page"
+      >
+        <img
+          class="logo__img"
+          src="images/logo.svg"
+          alt="Логотип сайта"
+          width="100"
+          height="22"
+        >
+      </a>
+      <ul class="header__user-menu user-menu">
+        <li class="user-menu__item">
+          <a
+            class="user-menu__link user-menu__link--search"
+            href="#"
+          >
+            <span class="visually-hidden">
+              Поиск
+            </span>
+          </a>
+        </li>
+        <li class="user-menu__item">
+          <a
+            class="user-menu__link user-menu__link--cabinet"
+            href="#"
+          >
+            <span class="visually-hidden">
+              Личный кабинет
+            </span>
+          </a>
+        </li>
+        <li class="user-menu__item">
+          <a
+            class="user-menu__link user-menu__link--like"
+            href="#"
+          >
+            <span class="visually-hidden">
+              Избранное
+            </span>
+          </a>
+        </li>
+        <li class="user-menu__item">
+          <a
+            class="user-menu__link user-menu__link--card"
+            href="#"
+          >
+            <span class="visually-hidden">
+              Корзина
+            </span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main class="page__content">
+  <div class="container">
+    <ul class="breadcrumbs">
+      <li class="breadcrumbs__item">
+        <a
+          class="breadcrumbs__link"
+          href="#"
+        >
+          Главная
+        </a>
+      </li>
+
+      <li class="breadcrumbs__item">
+        <a
+          class="breadcrumbs__link"
+        >
+          Оформление заказа
+        </a>
+      </li>
+    </ul>
+    <form
+      class="cart"
+      action="https://echo.htmlacademy.ru/"
+      method="post"
+    >
+      <h1 class="cart__title">Оформление заказа</h1>
+      <p class="cart__login">
+        Есть аккаунт?
+        <a href="#">Войти</a>
+      </p>
+      <h2 class="cart__subtitle">3 товара на сумму <span>25 000</span> ₽</h2>
+      <ul class="cart__list">
+        <li class="cart__item product">
+          <picture>
+            <img
+              class="product__img"
+              src="./images/product/product-1@1x.jpg"
+              alt="Фото Утепленная стеганная куртка женская Top Hills"
+              width="90"
+              height="111"
+            >
+          </picture>
+          <h3 class="product__title">Утепленная стеганная куртка женская Top Hills</h3>
+          <button type="button">
+            <span class="visually-hidden">Удалить товар</span>
+          </button>
+          <dl class="product__info">
+            <div class="product__info-block">
+              <dt class="product__info-title">Артикул</dt>
+              <dd class="product__info-desc">512-05</dd>
+            </div>
+            <div class="product__info-block">
+              <dt class="product__info-title">Сезон</dt>
+              <dd class="product__info-desc">Осень-зима</dd>
+            </div>
+          </dl>
+          <fieldset class="product__size">
+            <legend class="visually-hidden">
+              Выбер размера
+            </legend>
+            <ul class="product__size-list">
+              <li class="product__size-item">
+                <label class="product__size-field field-size">
+                  <input
+                    class="field-size__input"
+                    type="radio"
+                    name="size-product-1"
+                    value="xs"
+                  >
+                  <span class="field-size__text">XS</span>
+                </label>
+              </li>
+              <li class="product__size-item">
+                <label class="product__size-field field-size">
+                  <input
+                    class="field-size__input"
+                    type="radio"
+                    name="size-product-1"
+                    value="s"
+                  >
+                  <span class="field-size__text">S</span>
+                </label>
+              </li>
+              <li class="product__size-item">
+                <label class="product__size-field field-size">
+                  <input
+                    class="field-size__input"
+                    type="radio"
+                    name="size-product-1"
+                    value="m"
+                    checked
+                  >
+                  <span class="field-size__text">M</span>
+                </label>
+              </li>
+              <li class="product__size-item">
+                <label class="product__size-field field-size">
+                  <input
+                    class="field-size__input"
+                    type="radio"
+                    name="size-product-1"
+                    value="l"
+                  >
+                  <span class="field-size__text">L</span>
+                </label>
+              </li>
+              <li class="product__size-item">
+                <label class="product__size-field field-size">
+                  <input
+                    class="field-size__input"
+                    type="radio"
+                    name="size-product-1"
+                    value="xl"
+                  >
+                  <span class="field-size__text">Xl</span>
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="product__color">
+            <legend class="visually-hidden">Выбор цвета</legend>
+            <ul class="product__color-list">
+              <li class="product__color-item">
+                <label class="product__color-field field-color">
+                  <input
+                    class="field-color__input"
+                    type="radio"
+                    name="color-product-1"
+                    value="black"
+                    checked
+                  >
+                  <span class="field-color__text visually-hidden">Чёрный</span>
+                </label>
+              </li>
+              <li class="product__color-item">
+                <label class="product__color-field field-color">
+                  <input
+                    class="field-color__input"
+                    type="radio"
+                    name="color-product-1"
+                    value="blue"
+                  >
+                  <span class="field-color__text visually-hidden">Синий</span>
+                </label>
+              </li>
+              <li class="product__color-item">
+                <label class="product__color-field field-color">
+                  <input
+                    class="field-color__input"
+                    type="radio"
+                    name="color-product-1"
+                    value="brown"
+                  >
+                  <span class="field-color__text visually-hidden">Коричневый
+                  </span>
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+          <div class="product__price">
+            <div class="product__price-block">
+              <del class="product__price-old">12 000 ₽</del>
+              <ins class="product__price-current">10 000 ₽</ins>
+            </div>
+            <div class="product__count counter">
+              <button
+                type="button"
+                class="counter__button counter__button--minus"
+              >
+                <span class="visually-hidden">Уменьшить количество</span>
+              </button>
+              <label class="counter__field">
+                <input
+                  class="counter__field-input"
+                  type="text"
+                  name="count-product-1"
+                  value="2"
+                >
+              </label>
+              <button
+                type="button"
+                class="counter__button counter__button--plus"
+              >
+                <span class="visually-hidden">Увеличить количество</span>
+              </button>
+            </div>
+            <div class="product__price-block product__price-total">
+              <del class="product__price-old">24 000 ₽</del>
+              <ins class="product__price-current">20 000 ₽</ins>
+            </div>
+          </div>
+        </li>
+        <li class="cart__item product">
+          <picture>
+            <img
+              class="product__img"
+              src="./images/product/product-2@1x.jpg"
+              alt="Фото Вязанная шапка Zolla"
+              width="90"
+              height="111"
+            >
+          </picture>
+          <h3 class="product__title">Вязанная шапка Zolla</h3>
+          <button type="button">
+            <span class="visually-hidden">Удалить товар</span>
+          </button>
+          <dl class="product__info">
+            <div class="product__info-block">
+              <dt class="product__info-title">Артикул</dt>
+              <dd class="product__info-desc">891-256</dd>
+            </div>
+            <div class="product__info-block">
+              <dt class="product__info-title">Сезон</dt>
+              <dd class="product__info-desc">Демисезон</dd>
+            </div>
+          </dl>
+          <fieldset class="product__size">
+            <legend class="visually-hidden">
+              Выбер размера
+            </legend>
+            <ul class="product__size-list">
+              <li class="product__size-item">
+                <label class="product__size-field field-size">
+                  <input
+                    class="field-size__input"
+                    type="radio"
+                    name="size-product-2"
+                    value="xs"
+                  >
+                  <span class="field-size__text">XS</span>
+                </label>
+              </li>
+              <li class="product__size-item">
+                <label class="product__size-field field-size">
+                  <input
+                    class="field-size__input"
+                    type="radio"
+                    name="size-product-2"
+                    value="s"
+                    checked
+                  >
+                  <span class="field-size__text">S</span>
+                </label>
+              </li>
+              <li class="product__size-item">
+                <label class="product__size-field field-size">
+                  <input
+                    class="field-size__input"
+                    type="radio"
+                    name="size-product-2"
+                    value="m"
+                  >
+                  <span class="field-size__text">M</span>
+                </label>
+              </li>
+              <li class="product__size-item">
+                <label class="product__size-field field-size">
+                  <input
+                    class="field-size__input"
+                    type="radio"
+                    name="size-product-2"
+                    value="l"
+                  >
+                  <span class="field-size__text">L</span>
+                </label>
+              </li>
+              <li class="product__size-item">
+                <label class="product__size-field field-size">
+                  <input
+                    class="field-size__input"
+                    type="radio"
+                    name="size-product-2"
+                    value="xl"
+                    disabled
+                  >
+                  <span class="field-size__text">Xl</span>
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="product__color">
+            <legend class="visually-hidden">Выбор цвета</legend>
+            <ul class="product__color-list">
+              <li class="product__color-item">
+                <label class="product__color-field field-color">
+                  <input
+                    class="field-color__input"
+                    type="radio"
+                    name="color-product-2"
+                    value="black"
+                    checked
+                  >
+                  <span class="field-color__text visually-hidden">Чёрный</span>
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+          <div class="product__price">
+            <div class="product__price-block">
+              <span class="product__price-current">500 ₽</span>
+            </div>
+            <div class="product__count counter">
+              <button
+                type="button"
+                class="counter__button counter__button--minus"
+              >
+                <span class="visually-hidden">Уменьшить количество</span>
+              </button>
+              <label class="counter__field">
+                <input
+                  class="counter__field-input"
+                  type="text"
+                  name="count-product-1"
+                  value="1"
+                >
+              </label>
+              <button
+                type="button"
+                class="counter__button counter__button--plus"
+              >
+                <span class="visually-hidden">Увеличить количество</span>
+              </button>
+            </div>
+            <div class="product__price-block">
+              <span class="product__price-current">500 ₽</span>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <button type="submit">Оформить заказ</button>
+    </form>
+  </div>
+</main>
+</body>
 </html>
