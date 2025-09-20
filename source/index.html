@@ -442,6 +442,120 @@
           </div>
         </li>
       </ul>
+      <fieldset class="cart__block">
+        <legend class="cart__subtitle">Контактные данные</legend>
+        <ul class="cart__info">
+          <li class="caty__info-item">
+            <label class="cart__input field">
+          <span class="field__text">
+            Имя
+          </span>
+              <input
+                class="field__input"
+                type="text"
+                name="name"
+              >
+            </label>
+          </li>
+          <li class="caty__info-item">
+            <label class="cart__input field">
+          <span class="field__text">
+            Фамилия
+          </span>
+              <input
+                class="field__input"
+                type="text"
+                name="surname"
+              >
+            </label>
+          </li>
+          <li class="caty__info-item">
+            <label class="cart__input field">
+          <span class="field__text">
+            Телефон
+          </span>
+              <input
+                class="field__input"
+                type="text"
+                name="phone"
+              >
+            </label>
+          </li>
+          <li class="caty__info-item">
+            <label class="cart__input field">
+          <span class="field__text">
+            Email
+          </span>
+              <input
+                class="field__input"
+                type="text"
+                name="email"
+              >
+            </label>
+          </li>
+          <li class="caty__info-item">
+            <label class="cart__input field">
+          <span class="field__text">
+            Адрес доставки
+          </span>
+              <input
+                class="field__input"
+                type="text"
+                name="address"
+              >
+            </label>
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset class="cart__block">
+        <legend class="cart__subtitle">Оплата</legend>
+        <ul class="cart__info-pay">
+          <li class="cart__info-pay">
+            <label class="cart__input field-radio">
+              <input
+                class="field-radio__input"
+                type="radio"
+                name="pay"
+                value="cash-to-courier"
+                checked
+              >
+              <span class="field-radio__text">Наличными курьеру</span>
+            </label>
+          </li>
+          <li class="cart__info-pay">
+            <label class="cart__input field-radio">
+              <input
+                class="field-radio__input"
+                type="radio"
+                name="pay"
+                value="card-to-courier"
+              >
+              <span class="field-radio__text">Картой курьеру</span>
+            </label>
+          </li>
+          <li class="cart__info-pay">
+            <label class="cart__input field-radio">
+              <input
+                class="field-radio__input"
+                type="radio"
+                name="pay"
+                value="card-to-online"
+              >
+              <span class="field-radio__text">Картой онлайн</span>
+            </label>
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset class="cart__block">
+        <legend class="cart__subtitle">Комментарий к заказу</legend>
+        <label class="cart__comment textarea">
+          <textarea
+            class="textarea__input"
+            name="comment"
+          ></textarea>
+          <span class="textarea__text">Комментарий к заказу</span>
+        </label>
+      </fieldset>
       <button type="submit">Оформить заказ</button>
     </form>
   </div>
