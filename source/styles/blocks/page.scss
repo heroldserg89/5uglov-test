@@ -1,0 +1,21 @@
+@use "./../module.scss";
+
+.page {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+.page__body {
+  min-width: 320px;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  color: module.$var-black;
+  font-family: module.$var-font-family;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.page__content {
+  flex-grow: 1;
+}

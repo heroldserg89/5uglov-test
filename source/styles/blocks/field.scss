@@ -1,0 +1,50 @@
+@use "../module";
+
+.field {
+  position: relative;
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.field__input {
+  font-family: inherit;
+  width: 100%;
+  border: 1px solid module.$var-grey-2;
+  border-radius: 0;
+  padding: 12px 16px;
+
+  &:focus-visible {
+    outline: none;
+    border-color: module.$var-grey-1;
+
+    + .field__text {
+      padding: 2px 4px;
+      font-size: 12px;
+      line-height: 15px;
+      top: -20px;
+    }
+  }
+
+  &::placeholder {
+    font-size: 0;
+  }
+
+  &:not(:placeholder-shown) {
+    + .field__text {
+      padding: 2px 4px;
+      font-size: 12px;
+      line-height: 15px;
+      top: -20px;
+    }
+  }
+}
+
+.field__text {
+  position: absolute;
+  top: 0;
+  left: 16px;
+  background-color: module.$var-white;
+  color: module.$var-grey-1;
+  transition-duration: module.$var-transition-duration;
+  transition-property: top, font-size, line-height;
+}

@@ -27,8 +27,10 @@
 </head>
 <body class="page__body">
 <header class="header">
-  <div class="header__wrapper container">
-    <nav class="header__nav">
+  <div class="header__nav container">
+    <dialog
+      class="header__mobile-menu"
+    >
       <ul class="header__menu">
         <li class="header__menu-item">
           <a
@@ -55,67 +57,81 @@
           </a>
         </li>
       </ul>
-      <a
-        class="header__logo logo"
-        href="/"
-        aria-current="page"
+    </dialog>
+    <a
+      class="header__logo logo"
+      href="/"
+      aria-current="page"
+    >
+      <img
+        class="logo__img"
+        src="images/logo.svg"
+        alt="Логотип сайта"
+        width="100"
+        height="22"
       >
-        <img
-          class="logo__img"
-          src="images/logo.svg"
-          alt="Логотип сайта"
-          width="100"
-          height="22"
+    </a>
+    <ul class="header__user-menu user-menu">
+      <li
+        class="user-menu__item user-menu__item--hidden"
+      >
+        <a
+          class="user-menu__link user-menu__link--search"
+          href="#"
         >
-      </a>
-      <ul class="header__user-menu user-menu">
-        <li class="user-menu__item">
-          <a
-            class="user-menu__link user-menu__link--search"
-            href="#"
-          >
             <span class="visually-hidden">
               Поиск
             </span>
-          </a>
-        </li>
-        <li class="user-menu__item">
-          <a
-            class="user-menu__link user-menu__link--cabinet"
-            href="#"
-          >
+        </a>
+      </li>
+      <li
+        class="user-menu__item user-menu__item--hidden"
+      >
+        <a
+          class="user-menu__link user-menu__link--cabinet"
+          href="#"
+        >
             <span class="visually-hidden">
               Личный кабинет
             </span>
-          </a>
-        </li>
-        <li class="user-menu__item">
-          <a
-            class="user-menu__link user-menu__link--like"
-            href="#"
-          >
+        </a>
+      </li>
+      <li
+        class="user-menu__item user-menu__item--hidden"
+      >
+        <a
+          class="user-menu__link user-menu__link--like"
+          href="#"
+        >
             <span class="visually-hidden">
               Избранное
             </span>
-          </a>
-        </li>
-        <li class="user-menu__item">
-          <a
-            class="user-menu__link user-menu__link--card"
-            href="#"
-          >
+        </a>
+      </li>
+      <li class="user-menu__item">
+        <a
+          class="user-menu__link user-menu__link--cart"
+          href="#"
+        >
             <span class="visually-hidden">
               Корзина
             </span>
-          </a>
-        </li>
-      </ul>
-    </nav>
+        </a>
+      </li>
+    </ul>
+    <button
+      class="header__burger burger"
+      type="button"
+    >
+      <span class="visually-hidden">
+        Открыть меню
+      </span>
+    </button>
   </div>
 </header>
-<main class="page__content">
-  <div class="container">
-    <ul class="breadcrumbs">
+<main class="page__content content">
+  <div class="content__wrapper container">
+    <ul class="content__breadcrumbs breadcrumbs">
       <li class="breadcrumbs__item">
         <a
           class="breadcrumbs__link"
@@ -128,6 +144,8 @@
       <li class="breadcrumbs__item">
         <a
           class="breadcrumbs__link"
+          href="/"
+          aria-current="page"
         >
           Оформление заказа
         </a>
@@ -137,141 +155,162 @@
       class="cart"
       action="https://echo.htmlacademy.ru/"
       method="post"
+      autocomplete="off"
     >
       <h1 class="cart__title">Оформление заказа</h1>
       <p class="cart__login">
         Есть аккаунт?
-        <a href="#">Войти</a>
+        <a
+          class="cart__login-link"
+          href="#"
+        >Войти
+        </a>
       </p>
-      <h2 class="cart__subtitle">3 товара на сумму <span>25 000</span> ₽</h2>
+      <h2 class="cart__subtitle">3 товара на<br> сумму <span>25 000</span> ₽
+      </h2>
       <ul class="cart__list">
         <li class="cart__item product">
-          <picture>
-            <img
-              class="product__img"
-              src="./images/product/product-1@1x.jpg"
-              alt="Фото Утепленная стеганная куртка женская Top Hills"
-              width="90"
-              height="111"
+          <div class="product__wrapper">
+            <div class="product__heading">
+              <picture>
+                <img
+                  class="product__img"
+                  src="./images/product/product-1@1x.jpg"
+                  alt="Фото Утепленная стеганная куртка женская Top Hills"
+                  width="90"
+                  height="111"
+                >
+              </picture>
+              <a
+                class="product__link"
+                href="#"
+              >
+                <h3 class="product__title">Утепленная стеганная куртка женская Top Hills</h3>
+              </a>
+
+            </div>
+            <button
+              class="product__delete"
+              type="button"
             >
-          </picture>
-          <h3 class="product__title">Утепленная стеганная куртка женская Top Hills</h3>
-          <button type="button">
-            <span class="visually-hidden">Удалить товар</span>
-          </button>
-          <dl class="product__info">
-            <div class="product__info-block">
-              <dt class="product__info-title">Артикул</dt>
-              <dd class="product__info-desc">512-05</dd>
-            </div>
-            <div class="product__info-block">
-              <dt class="product__info-title">Сезон</dt>
-              <dd class="product__info-desc">Осень-зима</dd>
-            </div>
-          </dl>
-          <fieldset class="product__size">
-            <legend class="visually-hidden">
-              Выбер размера
-            </legend>
-            <ul class="product__size-list">
-              <li class="product__size-item">
-                <label class="product__size-field field-size">
-                  <input
-                    class="field-size__input"
-                    type="radio"
-                    name="size-product-1"
-                    value="xs"
-                  >
-                  <span class="field-size__text">XS</span>
-                </label>
-              </li>
-              <li class="product__size-item">
-                <label class="product__size-field field-size">
-                  <input
-                    class="field-size__input"
-                    type="radio"
-                    name="size-product-1"
-                    value="s"
-                  >
-                  <span class="field-size__text">S</span>
-                </label>
-              </li>
-              <li class="product__size-item">
-                <label class="product__size-field field-size">
-                  <input
-                    class="field-size__input"
-                    type="radio"
-                    name="size-product-1"
-                    value="m"
-                    checked
-                  >
-                  <span class="field-size__text">M</span>
-                </label>
-              </li>
-              <li class="product__size-item">
-                <label class="product__size-field field-size">
-                  <input
-                    class="field-size__input"
-                    type="radio"
-                    name="size-product-1"
-                    value="l"
-                  >
-                  <span class="field-size__text">L</span>
-                </label>
-              </li>
-              <li class="product__size-item">
-                <label class="product__size-field field-size">
-                  <input
-                    class="field-size__input"
-                    type="radio"
-                    name="size-product-1"
-                    value="xl"
-                  >
-                  <span class="field-size__text">Xl</span>
-                </label>
-              </li>
-            </ul>
-          </fieldset>
-          <fieldset class="product__color">
-            <legend class="visually-hidden">Выбор цвета</legend>
-            <ul class="product__color-list">
-              <li class="product__color-item">
-                <label class="product__color-field field-color">
-                  <input
-                    class="field-color__input"
-                    type="radio"
-                    name="color-product-1"
-                    value="black"
-                    checked
-                  >
-                  <span class="field-color__text visually-hidden">Чёрный</span>
-                </label>
-              </li>
-              <li class="product__color-item">
-                <label class="product__color-field field-color">
-                  <input
-                    class="field-color__input"
-                    type="radio"
-                    name="color-product-1"
-                    value="blue"
-                  >
-                  <span class="field-color__text visually-hidden">Синий</span>
-                </label>
-              </li>
-              <li class="product__color-item">
-                <label class="product__color-field field-color">
-                  <input
-                    class="field-color__input"
-                    type="radio"
-                    name="color-product-1"
-                    value="brown"
-                  >
-                  <span class="field-color__text visually-hidden">Коричневый
+              <span class="visually-hidden">Удалить товар</span>
+            </button>
+            <div class="product__block">
+              <dl class="product__info">
+                <div class="product__info-block">
+                  <dt class="product__info-title">Артикул</dt>
+                  <dd class="product__info-desc">512-05</dd>
+                </div>
+                <div class="product__info-block">
+                  <dt class="product__info-title">Сезон</dt>
+                  <dd class="product__info-desc">Осень-зима</dd>
+                </div>
+              </dl>
+              <fieldset class="product__size">
+                <legend class="visually-hidden">
+                  Выбер размера
+                </legend>
+                <ul class="product__size-list">
+                  <li class="product__size-item">
+                    <label class="product__size-field field-size">
+                      <input
+                        class="field-size__input"
+                        type="radio"
+                        name="size-product-1"
+                        value="xs"
+                      >
+                      <span class="field-size__text">XS</span>
+                    </label>
+                  </li>
+                  <li class="product__size-item">
+                    <label class="product__size-field field-size">
+                      <input
+                        class="field-size__input"
+                        type="radio"
+                        name="size-product-1"
+                        value="s"
+                      >
+                      <span class="field-size__text">S</span>
+                    </label>
+                  </li>
+                  <li class="product__size-item">
+                    <label class="product__size-field field-size">
+                      <input
+                        class="field-size__input"
+                        type="radio"
+                        name="size-product-1"
+                        value="m"
+                        checked
+                      >
+                      <span class="field-size__text">M</span>
+                    </label>
+                  </li>
+                  <li class="product__size-item">
+                    <label class="product__size-field field-size">
+                      <input
+                        class="field-size__input"
+                        type="radio"
+                        name="size-product-1"
+                        value="l"
+                      >
+                      <span class="field-size__text">L</span>
+                    </label>
+                  </li>
+                  <li class="product__size-item">
+                    <label class="product__size-field field-size">
+                      <input
+                        class="field-size__input"
+                        type="radio"
+                        name="size-product-1"
+                        value="xl"
+                      >
+                      <span class="field-size__text">Xl</span>
+                    </label>
+                  </li>
+                </ul>
+              </fieldset>
+              <fieldset class="product__color">
+                <legend class="visually-hidden">Выбор цвета</legend>
+                <ul class="product__color-list">
+                  <li class="product__color-item">
+                    <label class="product__color-field field-color">
+                      <input
+                        class="field-color__input field-color__input--black"
+                        type="radio"
+                        name="color-product-1"
+                        value="black"
+                        checked
+                      >
+                      <span class="field-color__text visually-hidden">Чёрный</span>
+                    </label>
+                  </li>
+                  <li class="product__color-item">
+                    <label class="product__color-field field-color">
+                      <input
+                        class="field-color__input field-color__input--blue"
+                        type="radio"
+                        name="color-product-1"
+                        value="blue"
+                      >
+                      <span class="field-color__text visually-hidden">Синий</span>
+                    </label>
+                  </li>
+                  <li class="product__color-item">
+                    <label class="product__color-field field-color">
+                      <input
+                        class="field-color__input field-color__input--brown"
+                        type="radio"
+                        name="color-product-1"
+                        value="brown"
+                      >
+                      <span class="field-color__text visually-hidden">Коричневый
                   </span>
-                </label>
-              </li>
-            </ul>
-          </fieldset>
+                    </label>
+                  </li>
+                </ul>
+              </fieldset>
+            </div>
+          </div>
           <div class="product__price">
             <div class="product__price-block">
               <del class="product__price-old">12 000 ₽</del>
@@ -279,8 +318,8 @@
             </div>
             <div class="product__count counter">
               <button
-                type="button"
                 class="counter__button counter__button--minus"
+                type="button"
               >
                 <span class="visually-hidden">Уменьшить количество</span>
               </button>
@@ -293,8 +332,8 @@
                 >
               </label>
               <button
-                type="button"
                 class="counter__button counter__button--plus"
+                type="button"
               >
                 <span class="visually-hidden">Увеличить количество</span>
               </button>
@@ -416,8 +455,8 @@
             </div>
             <div class="product__count counter">
               <button
-                type="button"
                 class="counter__button counter__button--minus"
+                type="button"
               >
                 <span class="visually-hidden">Уменьшить количество</span>
               </button>
@@ -430,8 +469,8 @@
                 >
               </label>
               <button
-                type="button"
                 class="counter__button counter__button--plus"
+                type="button"
               >
                 <span class="visually-hidden">Увеличить количество</span>
               </button>
@@ -445,64 +484,69 @@
       <fieldset class="cart__block">
         <legend class="cart__subtitle">Контактные данные</legend>
         <ul class="cart__info">
-          <li class="caty__info-item">
+          <li class="cart__info-item">
             <label class="cart__input field">
-          <span class="field__text">
-            Имя
-          </span>
               <input
                 class="field__input"
                 type="text"
                 name="name"
+                placeholder="Имя"
               >
+              <span class="field__text">
+                Имя
+              </span>
             </label>
           </li>
-          <li class="caty__info-item">
+          <li class="cart__info-item">
             <label class="cart__input field">
-          <span class="field__text">
-            Фамилия
-          </span>
               <input
                 class="field__input"
                 type="text"
                 name="surname"
+                placeholder="Фамилия"
               >
+              <span class="field__text">
+                Фамилия
+              </span>
             </label>
           </li>
-          <li class="caty__info-item">
+          <li class="cart__info-item">
             <label class="cart__input field">
-          <span class="field__text">
-            Телефон
-          </span>
               <input
                 class="field__input"
                 type="text"
                 name="phone"
+                placeholder="Телефон"
               >
+              <span class="field__text">
+                Телефон
+              </span>
             </label>
           </li>
-          <li class="caty__info-item">
+          <li class="cart__info-item">
             <label class="cart__input field">
-          <span class="field__text">
-            Email
-          </span>
               <input
                 class="field__input"
                 type="text"
                 name="email"
+                placeholder="Email"
               >
+              <span class="field__text">
+                Email
+              </span>
             </label>
           </li>
-          <li class="caty__info-item">
+          <li class="cart__info-item">
             <label class="cart__input field">
-          <span class="field__text">
-            Адрес доставки
-          </span>
               <input
                 class="field__input"
                 type="text"
                 name="address"
+                placeholder="Адрес доставки"
               >
+              <span class="field__text">
+                Адрес доставки
+              </span>
             </label>
           </li>
         </ul>
@@ -548,17 +592,23 @@
       </fieldset>
       <fieldset class="cart__block">
         <legend class="cart__subtitle">Комментарий к заказу</legend>
-        <label class="cart__comment textarea">
-          <textarea
-            class="textarea__input"
-            name="comment"
-          ></textarea>
-          <span class="textarea__text">Комментарий к заказу</span>
+        <p class="cart__comment field-textarea"></p>
+        <textarea
+          class="field-textarea__input"
+          name="comment"
+          id="comment"
+        ></textarea>
+        <label
+          class="field-textarea__text"
+          for="comment"
+        >
+          Комментарий к заказу
         </label>
       </fieldset>
       <button type="submit">Оформить заказ</button>
     </form>
   </div>
 </main>
+<footer class="footer">Footer</footer>
 </body>
 </html>

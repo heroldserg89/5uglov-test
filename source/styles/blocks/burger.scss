@@ -1,0 +1,46 @@
+@use "../module";
+
+.burger {
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  border: none;
+  position: relative;
+
+  &::before,
+  &::after {
+    position: absolute;
+    display: block;
+    content: "";
+    height: 2px;
+    background-color: module.$var-black;
+    width: 100%;
+    transition-property: translate, rotate;
+    transition-duration: 0.3s;
+  }
+
+  &::before {
+    translate: 0 -6px;
+  }
+
+  &::after {
+    width: 18px;
+    translate: 0 4px;
+    right: 0;
+  }
+
+  &--active {
+    &::before {
+      translate: 0;
+      rotate: 45deg;
+    }
+
+    &::after {
+      width: 100%;
+      translate: 0;
+      rotate: -45deg;
+    }
+  }
+}

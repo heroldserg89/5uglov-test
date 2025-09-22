@@ -1,2 +1,4 @@
 /* здесь подключите шрифты */
-@use "../mixins/font-face.scss";
+@use "../mixins/font-face" as *;
+@include font-face("Helvetica", "Helvetica", 400, normal);
+@include font-face("Helvetica", "Helvetica-Bolc", 700, normal);

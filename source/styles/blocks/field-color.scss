@@ -1,0 +1,49 @@
+@use "../module";
+
+.field-color__input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  transition-duration: module.$var-transition-duration;
+  transition-property: border-color;
+
+  &::before {
+    display: block;
+    content: "";
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    transition-duration: module.$var-transition-duration;
+    transition-property: width, height;
+  }
+
+  &--black::before {
+    background-color: module.$var-black-product;
+  }
+
+  &--blue::before {
+    background-color: module.$var-blue-product;
+  }
+
+  &--brown::before {
+    background-color: module.$var-brown-product;
+  }
+
+  @include module.grid-hover {
+    border-color: module.$var-grey-2;
+  }
+
+  &:checked {
+    border-color: module.$var-black;
+
+    &::before {
+      width: 14px;
+      height: 14px;
+    }
+  }
+}

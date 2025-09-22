@@ -1,0 +1,46 @@
+@use "../module";
+
+.field-size {
+  position: relative;
+}
+
+.field-size__input {
+  appearance: none;
+  position: absolute;
+
+  &:checked + .field-size__text {
+    background-color: module.$var-black;
+    color: module.$var-white;
+
+    @include module.grid-hover {
+      background-color: module.$var-grey-2;
+      color: module.$var-black;
+    }
+  }
+
+  &:focus-visible + .field-size__text {
+    outline: 1px solid module.$var-black;
+  }
+
+  &:disabled + .field-size__text {
+    pointer-events: none;
+    color: module.$var-grey-2;
+  }
+}
+
+.field-size__text {
+  display: flex;
+  width: 30px;
+  height: 30px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  background-color: module.$var-grey-3;
+  cursor: pointer;
+  transition-duration: module.$var-transition-duration;
+  transition-property: background-color, color;
+
+  @include module.grid-hover {
+    background-color: module.$var-grey-2;
+  }
+}

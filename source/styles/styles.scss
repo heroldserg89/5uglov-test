@@ -2,9 +2,20 @@
 @use "../../node_modules/normalize.css/normalize";
 
 /* GLOBAL */
-@use "./common/variables.scss";
-@use "./common/global.scss";
-@use "./common/fonts.scss";
+@use "./common/variables";
+@use "./common/global";
+@use "./common/fonts";
+@use "./common/utils";
 
 /* BLOCKS */
-@use "./blocks/header.scss";
+@use "./blocks/page";
+@use "./blocks/burger";
+@use "./blocks/header";
+@use "./blocks/user-menu";
+@use "./blocks/breadcrumbs";
+@use "./blocks/cart";
+@use "./blocks/product";
+@use "./blocks/field";
+@use "./blocks/field-size";
+@use "./blocks/field-color";
+@use "./blocks/counter";
