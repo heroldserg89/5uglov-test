@@ -48,19 +48,27 @@
   }
 
   &--search {
-    mask-image: url("../../icons/search.svg");
+    &::before {
+      mask-image: url("../../icons/search.svg");
+    }
   }
 
   &--cabinet {
-    mask-image: url("../../icons/user.svg");
+    &::before {
+      mask-image: url("../../icons/user.svg");
+    }
   }
 
   &--like {
-    mask-image: url("../../icons/like.svg");
+    &::before {
+      mask-image: url("../../icons/like.svg");
+    }
   }
 
   &--cart {
-    mask-image: url("../../icons/cart.svg");
+    &::before {
+      mask-image: url("../../icons/cart.svg");
+    }
   }
 }
 

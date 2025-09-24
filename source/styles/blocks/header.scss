@@ -10,9 +10,14 @@
 
 .header__logo {
   flex-grow: 1;
+  transition-duration: module.$var-transition-duration;
+  transition-property: opacity, visibility, traslate;
 
   &--hidden {
-    display: none;
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    translate: -200%;
   }
 }
 

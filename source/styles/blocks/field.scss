@@ -2,6 +2,7 @@
 
 .field {
   position: relative;
+  display: block;
   font-size: 16px;
   line-height: 21px;
 }
@@ -21,7 +22,7 @@
       padding: 2px 4px;
       font-size: 12px;
       line-height: 15px;
-      top: -20px;
+      top: -10px;
     }
   }
 
@@ -34,14 +35,14 @@
       padding: 2px 4px;
       font-size: 12px;
       line-height: 15px;
-      top: -20px;
+      top: -10px;
     }
   }
 }
 
 .field__text {
   position: absolute;
-  top: 0;
+  top: 12px;
   left: 16px;
   background-color: module.$var-white;
   color: module.$var-grey-1;

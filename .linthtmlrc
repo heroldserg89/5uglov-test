@@ -1,3 +1,6 @@
 {
-  "extends": "linthtml-config-htmlacademy"
+  "extends": "linthtml-config-htmlacademy",
+  "rules": {
+    "label-no-enc-textarea-or-select": false
+  }
 }
