@@ -39,6 +39,8 @@
   cursor: pointer;
   transition-duration: module.$var-transition-duration;
   transition-property: background-color, color;
+  font-size: 12px;
+  line-height: 15px;
 
   @include module.grid-hover {
     background-color: module.$var-grey-2;

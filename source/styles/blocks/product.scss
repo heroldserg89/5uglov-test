@@ -3,18 +3,38 @@
 .product {
   padding-block: 16px;
   position: relative;
+  border-top: 1px solid module.$var-grey-2;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.product__wrapper {
-  margin-bottom: 16px;
+.product--delete {
+  & .product__block {
+    color: module.$var-grey-1;
+    background-color: module.$var-grey-3;
+    padding: 17px 34px 10px 8px;
+    gap: 6px;
+  }
+
+  & .product__title {
+    font-weight: 700;
+  }
+
+  & .product__button-delete {
+    top: 29px;
+    right: 8px;
+  }
 }
 
 .product__heading {
-  position: relative;
-  padding-right: 26px;
   display: flex;
   gap: 12px;
   margin-bottom: 8px;
+  padding-right: 26px;
+}
+
+.product__img {
+  vertical-align: top;
 }
 
 .product__link {
@@ -48,12 +68,13 @@
   gap: 5px;
 }
 
+
 .product__info-desc {
   margin-left: 0;
   color: module.$var-black;
 }
 
-.product__delete {
+.product__button-delete {
   cursor: pointer;
   position: absolute;
   padding: 0;
@@ -72,58 +93,36 @@
   }
 }
 
-.product__size {
+.product__fieldset {
   border: none;
   padding: 0;
+  margin: 0;
 }
 
-.product__size-list {
+.product__list {
   list-style: none;
   margin-block: 0;
   padding-left: 0;
   display: flex;
   gap: 9px;
-}
 
-.product__color {
-  border: none;
-  padding: 0;
-}
-
-.product__color-list {
-  list-style: none;
-  margin-block: 0;
-  padding-left: 0;
-  display: flex;
-  gap: 5px;
+  &--gap-xl {
+    gap: 16px;
+  }
 }
 
 .product__price {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 8px;
+  margin-top: 16px;
 }
 
-.product__price-block {
-  display: flex;
-  flex-direction: column;
-  flex-shrink: 0;
+.product__text {
+  margin: 0;
 }
 
-.product__count {
-  max-width: 146px;
-}
-
-.product__price-old {
-  color: module.$var-grey-1;
-  font-size: 12px;
-  line-height: 15px;
-}
-
-.product__price-current {
-  text-decoration: none;
-  font-size: 16px;
-  line-height: 21px;
-  font-weight: 700;
+.product__button-restore {
+  margin: 0;
+  padding: 0;
+  border: none;
+  font-size: inherit;
+  justify-self: start;
 }

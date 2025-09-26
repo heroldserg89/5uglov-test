@@ -1,3 +1,5 @@
+@use "../module";
+
 .user-menu {
   list-style: none;
   margin: 0;
@@ -26,6 +28,12 @@
     position: absolute;
 
     .user-menu--active & {
+      visibility: visible;
+      opacity: 1;
+      position: relative;
+    }
+
+    @include module.grid-md-block {
       visibility: visible;
       opacity: 1;
       position: relative;
